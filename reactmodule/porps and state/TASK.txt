@@ -1,0 +1,74 @@
+• Task 1:
+• Create a React component UserCardthat accepts name, age, and locationasprops
+and displays them in a card format.
+
+
+import React from 'react';
+
+const UserCard = ({ name, age, location }) => {
+  return (
+    <div style={styles.card}>
+      <h2 style={styles.title}>{name}</h2>
+      <p style={styles.info}><strong>Age:</strong> {age}</p>
+      <p style={styles.info}><strong>Location:</strong> {location}</p>
+    </div>
+  );
+};
+
+// Inline styles for the card layout
+const styles = {
+  card: {
+    width: '300px',
+    padding: '20px',
+    border: '1px solid #ccc',
+    borderRadius: '8px',
+    boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+    textAlign: 'center',
+    backgroundColor: '#f9f9f9',
+    margin: '20px auto',
+  },
+  title: {
+    marginBottom: '10px',
+    fontSize: '24px',
+    color: '#333',
+  },
+  info: {
+    fontSize: '16px',
+    color: '#666',
+    margin: '5px 0',
+  },
+};
+
+export default UserCard;
+
+
+
+
+• Task 2:
+• Create a Countercomponent with a button that increments a count value using
+React state. Display the current count on the screen.
+          
+import React from 'react';
+import { useState } from 'react';
+
+export default function App() {
+  const [counter, setcounter] = useState(0)
+
+  const handleclick1 = () => {
+    setcounter(counter + 1)
+  }
+  const handleclick2 = () => {
+    setcounter(counter - 1)
+  }
+  return (
+    <div>
+
+      <h1>{counter}</h1>
+      <button onClick={handleclick1}>Increment</button>
+      <button onClick={handleclick2}>Decrement</button>
+
+    </div>
+  );
+}
+
+

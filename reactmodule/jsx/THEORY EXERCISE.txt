@@ -1,0 +1,29 @@
+//THEORY EXERCISE
+//• Question 1: What is JSX in React.js? Why is it used?
+//• Question 2: How is JSX different from regular JavaScript? Can you write JavaScript
+//insideJSX?
+//• Question 3: Discuss the importance of using curly braces {}in JSX expressions.
+
+
+Answer 1 =>  JSX stands for JavaScript XML.
+             JSX allows us to write HTML in React.
+             JSX makes it easier to write and add HTML in React.
+
+             JSX stands for JavaScript XML.
+             It is a syntax extension for JavaScript, often used with React to describe what the UI should look like. 
+             With JSX, you can write HTML structures in the same file as your JavaScript code, creating a seamless development experience.
+
+
+ Answer 2 =>  JSX is a syntax extension for JavaScript that allows you to write HTML - like code within JavaScript.
+             It introduces XML - like tags and attributes to create React elements.JS, on the other hand,
+             is plain JavaScript code without any special syntax or extensions.
+             
+
+
+ Answer 3 =>  Curly braces in JSX are the syntactic sugar that sweetens the development process. 
+            The indicators tell React to interpret the enclosed content as JavaScript, not plain text. 
+            This allows developers to embed variables, function calls, and other JavaScript expressions directly within their JSX code. 
+            
+            In JSX, anything inside curly braces is evaluated as a JavaScript expression.
+            This means you can perform operations, access variables, and execute functions right within your JSX.
+            It's a powerful feature that enables developers to create dynamic and responsive UIs.

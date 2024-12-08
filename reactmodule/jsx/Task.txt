@@ -1,0 +1,37 @@
+//Task:
+//• Create a React component that renders the following JSX elements:
+//• A heading with the text "Welcome to JSX".
+//• A paragraph explaining JSX with dynamic data (use curly braces to
+//insertvariables).
+
+
+import React from 'react';
+
+export default function App() {
+
+  const name ='Welcome to JSX'
+  return (
+    <div>
+      <h1>{name}</h1>
+    </div>
+  );
+}
+
+//A paragraph explaining JSX with dynamic data (use curly braces to
+//insertvariables).
+
+import React from 'react';
+
+export default function App() {
+  const avatar='https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_640.jpg'
+  const description ='this is a bird'
+  return (
+    <div>
+      <img
+      className='avatar'
+      src={avatar}
+      ></img>
+      <h2>{description}</h2>
+    </div>
+  );
+}

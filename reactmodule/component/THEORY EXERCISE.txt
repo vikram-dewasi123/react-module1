@@ -1,0 +1,58 @@
+//Components (Functional & Class Components)
+THEORY EXERCISE
+• Question 1: What are components in React? Explain the difference between
+functionalcomponents and class components.
+• Question 2: How do you pass data to a component using props?
+• Question 3: What is the role of render()in class components?
+
+
+Answer 1 =>  Components are independent and reusable bits of code. 
+            They serve the same purpose as JavaScript functions, but work in isolation and return HTML. 
+            Components come in two types, Class components and Function components, in this tutorial we will concentrate on Function components.
+
+            A functional component is just a plain JavaScript pure function that accepts props as an argument and returns a React element(JSX).
+            A class component requires you to extend from React. 
+            Component and create a render function that returns a React element.
+
+
+Answer 2 => When you pass a component as a prop, you provide a child component with a React element that it can render as part of its output.
+          This technique is not limited to simple data types; functions and entire components can be passed as props, enabling complex interactions and composition.
+
+           example :-
+       ==> In parent component 
+           import React from 'react';
+           import ChildComponent from './ChildComponent';
+           
+           const ParentComponent = () => {
+             const message = "Hello from Parent!";
+             
+             return (
+               <div>
+                 <ChildComponent greeting={message} />
+               </div>
+             );
+           };
+           
+           export default ParentComponent;
+       ==> In child component
+       import React from 'react';
+
+       const ChildComponent = (props) => {
+         return <h1>{props.greeting}</h1>;
+       };
+       
+       export default ChildComponent;
+
+
+ Answer 3 =>   In React class components, the render() method plays a crucial role as it defines what the UI (User Interface) of the component will look like.
+             Specifically, the render() method is responsible for returning the JSX (or React elements) that represent the structure of the component’s view.
+
+           (1) Key Points about render() in Class Components:
+              Required Method: Every class component must define a render() method. It is the only method that directly interacts with the DOM and returns JSX, which React will then render     to the screen.
+ 
+           (2)Return JSX: Inside the render() method, you return JSX (or sometimes null if you don’t want to render anything). This JSX can include other React components, HTML elements, and expressions that will be evaluated and rendered by React.
+ 
+           (3)No side effects: The render() method should be a pure function, meaning it should not cause any side effects (like modifying the state or performing network requests). Its sole job is to return JSX based on the current state and props of the component.
+ 
+          (4) Triggers Re-renders: Whenever the state or props of a component change, the render() method will automatically be called again to update the UI. React does this efficiently by comparing the new JSX with the previous one and making updates to the DOM as necessary.    
+       

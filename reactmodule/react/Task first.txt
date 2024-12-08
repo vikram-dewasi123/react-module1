@@ -1,0 +1,18 @@
+//• Task:
+//• Set up a new React.js project using create-react-app.
+//• Create a basic component that displays "Hello, React!" on the web page.
+
+import React from 'react';
+
+import { useState } from 'react';
+
+
+export default function App() {
+  const [x, ] = useState("Hello , React !")
+  return (
+    <div>
+      <h1>{x}</h1>
+
+    </div>
+  );
+}

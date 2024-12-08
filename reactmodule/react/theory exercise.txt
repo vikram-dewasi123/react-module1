@@ -1,0 +1,38 @@
+ • Question 1: What is React.js? How is it different from other JavaScript frameworks
+               andlibraries?
+ • Answer : React is a open source JavaScript library that allows developers to build user interfaces (UIs) for web and native platforms:
+
+           Declarative: React makes it easy to create interactive UIs by designing simple views for each state in an application.
+           Component-based: React components manage their own state and can be composed to create complex UIs.
+           Server rendering: React can render on the server using Node.
+           Mobile apps: React Native can power mobile apps. 
+      
+      --> React and JavaScript is not closely comparable because React is a JavaScript library. The core programming language for building websites is called JavaScript,
+          and React is a tool designed to make creating user interfaces more straightforward using JavaScript.
+
+
+ • Question 2: Explain the core principles of React such as the virtual DOM and
+               component-based architecture.
+  Answer=>    Component-based architecture
+              :-Encourages developers to break down the user interface into reusable components, each with its own logic and state. This makes it easier to manage and
+                 maintain complex user interfaces. 
+              Virtual DOM
+              :- Optimizes rendering performance by creating an in-memory representation of the DOM. This allows React to update only the parts of the DOM that have changed, 
+                 instead of updating the entire DOM. 
+ 
+
+  • Question 3: What are the advantages of using React.js in web development?
+  
+  Answer => React.js is a free, open-source JavaScript library that can be used for web development to create interactive user interfaces. Some advantages of using React.js include: 
+           Easy to learn
+            :-React.js is easy to learn and use, and only requires a basic understanding of HTML and CSS. 
+           Fast rendering
+            :-React.js's Virtual DOM feature improves performance and UI updates by batching updates and minimizing reflows. 
+           SEO-friendly
+            :-React.js can help make web applications more discoverable and indexable by search engines. 
+           Component-based architecture
+            :- React.js's component-based architecture makes it easy to test and debug because each component is self-contained. 
+           Large ecosystem and community support
+            :- React.js has a large community that's constantly working on new features, bug fixes, and performance improvements. 
+           Third-party libraries
+            :-React.js has a large number of third-party components and libraries that make it easier to build complex applications. 

@@ -1,0 +1,93 @@
+THEORY EXERCISE
+• Question 1: What are props in React.js? How are props different from state?
+• Question 2: Explain the concept of state in React and how it is used to manage
+componentdata.
+• Question 3: Why is this.setState()used in class components, and how does it work?
+
+
+
+ANSWER 1 => Props (Short for "Properties")
+Purpose: Props are used to pass data from a parent component to a child component. They allow components to be dynamic and reusable by enabling data to be passed into them from their parent components.
+
+Immutability: Props are read-only. A component cannot modify its own props; they are set by the parent component.
+
+Usage: Props are passed to components through the component’s attributes in JSX.
+ For example:
+ function Parent() {
+  return <Child name="John" age={30} />;
+}
+
+function Child(props) {
+  return <div>{props.name} is {props.age} years old.</div>;
+}
+State
+Purpose: State is used to manage data that can change within a component over time. It holds values that affect the component’s behavior or rendering.
+
+Mutability: Unlike props, state is mutable. A component can update its state using methods like setState (in class components) or the useState hook (in function components).
+
+Usage: State is initialized in a component and can be updated during the component's lifecycle. 
+For example:
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+
+
+ANSWER 2 => In React, state refers to the data or variables that determine how a component behaves or renders.
+         It allows components to maintain and manage their own dynamic data that can change over time, such as user inputs, fetched data, or interaction results.
+          State is crucial for creating interactive and dynamic applications in React.
+
+Key Concepts of State in React:
+
+(1)Component-Level Data:
+    State is specific to each component. It enables components to hold and manage their internal data. 
+    For example, a component might need to store the count of items in a cart or the text of an input field.
+(2)Mutable Data:
+    Unlike props (which are immutable), the state is mutable, meaning it can be changed by the component itself using functions that update it. 
+    This is essential for handling user interactions or changing data over time.
+(3)Reactivity:
+    When the state of a component changes, React triggers a re-render of that component, updating the UI to reflect the new state.
+     This process allows the UI to stay in sync with the underlying data.
+
+
+
+ANSWER 3 =>    
+  ==> this.setState() used in class components=
+ (1)State Management: In React, the state is an object that holds data relevant to the component. 
+   Components can have their own state that tracks information like user inputs, fetched data,
+    or UI status. this.setState() is the function that allows components to change their state.
+
+   (2)Reactivity: When the state of a component changes, React needs to know so it can re-render the component with the updated state.
+    this.setState() triggers a re-render of the component and updates the DOM with the latest state, ensuring the UI is in sync with the data.
+
+   (3)Batching and Optimization: React batches multiple state updates into a single re-render to optimize performance. 
+   Calling this.setState() multiple times in a single event handler or function doesn't immediately trigger a re-render each time; instead,
+    React processes the changes in a batch, leading to fewer re-renders and better performance. 
+
+    class Counter extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = { count: 0 };
+      }
+    
+      increment = () => {
+        // Updates the state, increments the count
+        this.setState({ count: this.state.count + 1 });
+      };
+    
+      render() {
+        return (
+          <div>
+            <p>Count: {this.state.count}</p>
+            <button onClick={this.increment}>Increment</button>
+          </div>
+        );
+      }
+    }
+    
